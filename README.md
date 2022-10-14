@@ -28,3 +28,18 @@ The arguments for the `model.train()` methods include
 - validation: [Optional] A tuple of (source, target) pair as the validation set.
 
 To evaluate the model, use the `evaluate_mean_wh` function. Specifically, `evaluate_mean_wh(None)` performs prediction on the entire given image and generally produces the best results. Please refer to Figure 9 in Appendix VII for more discussions.
+
+
+## Bibtex
+
+If you use our code, please consider cite our paper
+
+```
+@article{xie2022augmented,
+  title={Augmented Equivariant Attention Networks for Microscopy Image Transformation},
+  author={Xie, Yaochen and Ding, Yu and Ji, Shuiwang},
+  journal={IEEE Transactions on Medical Imaging},
+  year={2022},
+  publisher={IEEE}
+}
+```
