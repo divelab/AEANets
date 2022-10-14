@@ -23,7 +23,7 @@ model.train(sources, targets, [256,256], validation=None, steps=120000, batch_si
 The arguments for the `model.train()` methods include
 
 - source_lst: a numpy array of training low-quality images of shape [N, W, H, C].
-- target_lst: a numpy array of training high-quality images of shape [N, W, H, C], with in same order to source images.
+- target_lst: a numpy array of training high-quality images of shape [N, W, H, C], in same order to source images.
 - patch_size: the patch size used for training. Will randomly crop training images into patches.
 - validation: [Optional] A tuple of (source, target) pair as the validation set.
 
