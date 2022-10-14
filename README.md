@@ -17,5 +17,14 @@ You can follow the example in this [Jypyter notebook](https://github.com/divelab
 To train the model, simply uncomment the following line in Cell 3
 
 ```
-model.train(sources, targets, [256,256], validation=(test_X[...,None].astype('float32'), test_Y[...,None].astype('float32')), steps=120000, batch_size=8,seed=1)
+model.train(sources, targets, [256,256], validation=None, steps=120000, batch_size=8,seed=1)
 ```
+
+The arguments for the `model.train()` methods include
+
+- source_lst: a numpy array of training low-quality images of shape [N, W, H, C].
+- target_lst: a numpy array of training high-quality images of shape [N, W, H, C], with in same order to source images.
+- patch_size: the patch size used for training. Will randomly crop training images into patches.
+- validation: [Optional] A tuple of (source, target) pair as the validation set.
+
+To evaluate the model, use the `evaluate_mean_wh` function. Specifically, `evaluate_mean_wh(None)` performs prediction on the entire given image and generally produces the best results. Please refer to Figure 9 in Appendix VII for more discussions.
